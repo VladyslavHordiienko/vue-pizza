@@ -1,30 +1,61 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="wrapper">
+    <Header/>
+    <router-view/>
+  </div>
 </template>
 
+<script>
+import Header from "@/containers/Header";
+import Catalog from "@/views/Catalog";
+export default {
+  components: {Catalog, Header}
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Black.eot');
+  src: local('./fonts/Proxima Nova Black'), local('ProximaNova-Black'),
+  url('./fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/ProximaNova-Black.woff') format('woff'),
+  url('./fonts/ProximaNova-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Bold.eot');
+  src: local('./fonts/Proxima Nova Bold'), local('ProximaNova-Bold'),
+  url('./fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/ProximaNova-Bold.woff') format('woff'),
+  url('./fonts/ProximaNova-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Regular.eot');
+  src: local('./fonts/Proxima Nova Regular'), local('ProximaNova-Regular'),
+  url('./fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/ProximaNova-Regular.woff') format('woff'),
+  url('./fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Extrabld.eot');
+  src: local('./fonts/Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+  url('./fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/ProximaNova-Extrabld.woff') format('woff'),
+  url('./fonts/ProximaNova-Extrabld.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@import "./assets/styles/app.scss";
 </style>

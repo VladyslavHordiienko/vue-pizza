@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "json-server": "npx json-server --watch public/db.json --port=3001"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-content-loader": "^2.0.1",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
